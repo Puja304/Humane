@@ -4,6 +4,12 @@
   --foreground: #171717;
 }
 
+
+html, body {
+  overflow-x: hidden;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -19,4 +25,19 @@ body {
     font-size: large;
     font-weight: bold;
   }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.25s ease-out both;
 }

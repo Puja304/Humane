@@ -1,11 +1,10 @@
 "use client";
-import HeaderWrapper from "../components/HeaderWrapper";
+import Header from "../components/HeaderNew";
 
 export default function Contact() {
   return (
     <div>
-      <HeaderWrapper/>
-        Contact Us
+      <Header/>
     </div>
   ) ; 
 };

@@ -1,10 +1,10 @@
 "use client";
-import HeaderWrapper from "../components/HeaderWrapper";
+import Header from "../components/HeaderNew";
 
 export default function About() {
   return (
     <div>
-      <HeaderWrapper/>
+      <Header/>
       About Us
     </div>
   ) ; 

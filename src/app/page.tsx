@@ -1,41 +1,89 @@
 "use client";
 import { useEffect,useState } from "react";
-import AnimatedTitle from "./components/AnimateTitle";
-import HeaderWrapper from "./components/HeaderWrapper";
 import Image from "next/image";
+import { bree, imFell, inter, jacquard } from "./layout";
+import DonationCount from "./components/DonationCount";
+import { Footer } from "./components/Footer";
+import FeaturedItems from "./components/FeaturedItems";
+import AnimatedIntro from "./components/AnimatedIntro";
+import HeroSection from "./components/HeroSection";
+import { useRef } from "react";
+import gsap from "gsap";
+import Header from "./components/HeaderNew";
+import FullPageScroll from "./components/FullPageScroll";
 
 
 export default function Home() {
-  const [showPage, setShowPage] = useState(false);
-  
+ const [showPage, setShowPage] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [showFooter, setShowFooter] = useState(false);
+
+
+  useEffect(() => {
+    if (showPage && contentRef.current) {
+      const sections = Array.from(contentRef.current.children);
+
+      // Initially hide all sections except header/hero
+      sections.forEach((section, i) => {
+        if (i > 1) {
+          (section as HTMLElement).style.opacity = "0";
+        }
+      });
+
+      // Animate visible sections
+      gsap.from([sections[0], sections[1]], {
+        y: 40,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: "power3.out",
+      });
+
+      // Animate sections on scroll
+      sections.slice(2).forEach((section) => {
+        gsap.fromTo(
+          section,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+    }
+  }, [showPage]);
+
+  useEffect(() => {
+     if (!showPage) return;
+    const handleResize = () => setShowFooter(window.innerWidth >= 768);
+    handleResize(); // set initially
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [showPage]);
 
   return (
     <>
-      {!showPage && <AnimatedTitle onFinish={() => setShowPage(true)} />}
+      {!showPage && <AnimatedIntro onFinish={() => setShowPage(true)} />}
       {showPage && (
-        <div className="home-page flex flex-col">
-          <HeaderWrapper />
-          <div className="px-1 sm:px-2 md:px-4">
-            <div className="hero-element relative w-full h-[500px] sm:h-[400px] md:h-[700px] lg:h-[900px] overflow-hidden">
-              <Image
-                src="/thrift.jpg"
-                alt="Thrift Store"
-                fill
-                className="object-cover brightness-90"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight drop-shadow-lg">
-                  Humane
-                </h1>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-medium mt-2 drop-shadow-md">
-                  The Thrift Store
-                </h3>
-              </div>
-            </div>
-          </div>
+        <div  className="home-page flex flex-col">
+          <Header />
+
+          <FullPageScroll>
+          <section className="panel h-screen"><HeroSection /></section>
+          <section className="panel h-screen"><FeaturedItems /></section>
+          <section className="panel h-screen"><DonationCount /></section>
+          {<div className={showFooter ? "h-1" : "display-none"}></div>}
+        </FullPageScroll>
+        {showFooter && <Footer />}
         </div>
+
       )}
     </>
   );
