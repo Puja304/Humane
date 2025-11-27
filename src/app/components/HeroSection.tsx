@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { bree } from "../layout";
+import { bree } from "../../fonts";
 import gsap
  from "gsap";
 const HeroSection = () => {

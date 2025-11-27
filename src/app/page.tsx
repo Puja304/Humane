@@ -1,7 +1,6 @@
 "use client";
 import { useEffect,useState } from "react";
 import Image from "next/image";
-import { bree, imFell, inter, jacquard } from "./layout";
 import DonationCount from "./components/DonationCount";
 import { Footer } from "./components/Footer";
 import FeaturedItems from "./components/FeaturedItems";

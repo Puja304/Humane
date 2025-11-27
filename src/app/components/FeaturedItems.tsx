@@ -1,5 +1,5 @@
 "use client"
-import { quicksand, merriweather } from "../layout";
+import { quicksand, merriweather } from "../../fonts";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"; 
 import { useRef,useEffect,useState } from "react";

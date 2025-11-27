@@ -1,0 +1,36 @@
+import { Inter, Playfair_Display, IM_Fell_DW_Pica_SC, Jacquard_24,Quicksand, Merriweather, Bree_Serif } from "next/font/google";
+
+export const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
+export const bree = Bree_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+})
+
+export const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
+
+export const inter = Inter({
+  variable: "--font-body",
+  subsets: ["latin"],
+});
+
+export const playfair = Playfair_Display({
+  variable: "--font-heading",
+  subsets: ["latin"],
+});
+
+export const imFell = IM_Fell_DW_Pica_SC({ 
+  weight: "400",
+  subsets: ["latin"] 
+});
+
+export const jacquard = Jacquard_24({
+   weight: "400",
+   subsets: ["latin"] 
+});

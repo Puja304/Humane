@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { HeaderStatic } from "./HeaderStatic";
-import { bree } from "../layout";
+import { bree } from "../../fonts";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 

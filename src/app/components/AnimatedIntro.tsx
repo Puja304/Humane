@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
-import { bree } from "../layout";
+import { bree } from "../../fonts";
 
 interface AnimatedIntroProps {
   onFinish?: () => void;

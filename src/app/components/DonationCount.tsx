@@ -1,5 +1,5 @@
 "use client"
-import {inter, playfair, bree} from "../layout"
+import {inter, playfair, bree} from "../../fonts"
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import gsap from "gsap";

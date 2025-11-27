@@ -1,5 +1,5 @@
 "use client"
-import { bree, playfair } from "../layout";
+import { bree, playfair } from "../../fonts";
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useRef,useEffect,useState } from "react";
