@@ -52,7 +52,7 @@ const DonationCount  = () => {
           <div className="text-white text-5xl sm:text-5xl md:text-6xl font-bold mt-10">
             {hasAnimated ? (
               <>
-               <CountUp end={value} duration={2.5} separator="," />
+               <CountUp end={value} duration={1.5} separator="," />
               </>
             ) : (
               "0"
