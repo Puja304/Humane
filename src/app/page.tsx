@@ -11,6 +11,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import Header from "./components/HeaderNew";
 import FullPageScroll from "./components/FullPageScroll";
+import DonationNoteOrgs from "./components/DonationNoteOrgs";
 
 
 export default function Home() {
@@ -79,6 +80,7 @@ export default function Home() {
           <section className="panel h-screen"><HeroSection /></section>
           <section className="panel h-screen"><FeaturedItems /></section>
           <section className="panel h-screen"><DonationCount /></section>
+          <section className="panel h-screen"><DonationNoteOrgs /></section>
           {<div className={showFooter ? "h-1" : "display-none"}></div>}
         </FullPageScroll>
         {showFooter && <Footer />}

@@ -1,5 +1,5 @@
 "use client"
-import {inter, playfair} from "../layout"
+import {inter, playfair, bree} from "../layout"
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import gsap from "gsap";
@@ -13,7 +13,7 @@ const DonationCount  = () => {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const value = 15000;
+  const value = 1000;
 
   useEffect(() => {
     if (inView && containerRef.current && !hasAnimated) {
@@ -43,35 +43,30 @@ const DonationCount  = () => {
         containerRef.current = node; // for gsap
       }}
 
-      className="donation-box bg-sky-900 flex flex-col lg:flex-row items-center justify-center text-center py-40 px-4 sm:px-6 md:px-12 h-screen md:h-250 lg:h-250 gap-30"
+      className="donation-box bg-sky-900 flex flex-col lg:flex-col items-center justify-center text-center py-40 px-4 sm:px-6 md:px-12 h-screen md:h-250 lg:h-250 gap-30"
     >
         <div>
-          <div className="text-white text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide flex flex-col">
+          <div className={`${bree.className} text-white text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide flex flex-col`}>
             So far, we've donated...
           </div>
-          <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mt-2">
+          <div className="text-white text-5xl sm:text-5xl md:text-6xl font-bold mt-10">
             {hasAnimated ? (
               <>
-                $<CountUp end={value} duration={2.5} separator="," />
+               <CountUp end={value} duration={2.5} separator="," />
               </>
             ) : (
-              "$0"
+              "0"
             )}
           </div>
-          <div className={`${playfair.className} text-white text-m sm:text-xxxs md:text-s tracking-wide flex flex-col mt-3`}>
-              With your help, we want to give back to the community :)
+          <div className={`${bree.className} text-white text-lg sm:text-xxs md:text-m tracking-wide flex flex-col mt-2`}>
+              Clothing Items
           </div>
         </div>
-        <div className="relative mt-10 flex justify-center items-center hover:-translate-y-2">
+        <div className="relative flex -mt-10 justify-center items-center hover:-translate-y-2 bg-remove">
         <img
-          src="/donation.png"
+          src="/rack.png"
           alt="thift 1"
-          className="w-40 sm:w-56 h-80 rounded-lg shadow-lg transform rotate-[-6deg] z-10"
-        />
-        <img
-          src="/donation.png"
-          alt="thrift 2"
-          className="w-40 sm:w-56 h-80 rounded-lg shadow-lg transform rotate-[6deg] -ml-20 z-0"
+          className=""
         />
       </div>
     </div>

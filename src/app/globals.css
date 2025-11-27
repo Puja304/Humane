@@ -4,6 +4,11 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-bright-count: ##7ed957;
+  --color-note-bg: #f0f2f7;
+}
+
 
 html, body {
   overflow-x: hidden;
