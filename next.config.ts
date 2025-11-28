@@ -6,9 +6,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/Humane",
-  assetPrefix: "/Humane",
-  outputFileTracingRoot: __dirname,
+  basePath: process.env.PAGES_BASE_PATH,
+  // basePath: "/Humane",
+  // assetPrefix: "/Humane",
+  // outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;
