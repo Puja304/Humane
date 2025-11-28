@@ -11,7 +11,7 @@ export const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <button className="flex items-center gap-2">
                 <Image
-                    src="/wings.png"
+                    src="./wings.png"
                     alt="Wings"
                     width={20}
                     height={20}

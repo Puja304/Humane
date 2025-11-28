@@ -93,7 +93,7 @@ const AnimatedIntro = ({ onFinish }: AnimatedIntroProps) => {
       <div className="text-center select-none flex flex-col items-center">
         <img
           ref={imageRef}
-          src="/wings.png"
+          src="./wings.png"
           alt="Wings"
           className="w-24 sm:w-32 mb-4"
         />

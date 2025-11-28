@@ -64,7 +64,7 @@ const DonationCount  = () => {
         </div>
         <div className="relative flex -mt-10 justify-center items-center hover:-translate-y-2 bg-remove">
         <img
-          src="/rack.png"
+          src="./rack.png"
           alt="thift 1"
           className=""
         />
