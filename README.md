@@ -1,2 +1,2 @@
 # Humane
-Humane Thrift Website
+A website for the amazing Humane Thrift Store in Calgary, AB
