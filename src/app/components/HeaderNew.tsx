@@ -12,9 +12,9 @@ export default function Header() {
 
   const navLinks = [
     // ... (your navLinks)
-    { label: "Home", href: "/Humane" },
-    { label: "About Us", href: "/Humane/about" },
-    { label: "Contact Us", href: "/Humane/contact" },
+    { label: "Home", href: "." },
+    { label: "About Us", href: "about" },
+    { label: "Contact Us", href: "contact" },
   ];
 
   useEffect(() => {
