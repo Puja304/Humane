@@ -47,7 +47,7 @@ const DonationNoteOrgs = () => {
                </div>
                <div className="donation-note-img sm:mt-3 md:mt-3 lg:mt-5">
                     <img src='./circle-logo.png'
-                    alt="wildilife-logo"
+                    alt="humane-logo"
                         className="
                         w-24 h-24
                         sm:w-20 sm:h-20

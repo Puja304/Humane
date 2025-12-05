@@ -63,11 +63,6 @@ const HeroSection = () => {
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundColor: "rgba(255,255,255,0.15)",
-            maskImage: `radial-gradient(circle 400px at ${cursorPos.x}px ${cursorPos.y}px, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%)`,
-            WebkitMaskImage: `radial-gradient(circle 400px at ${cursorPos.x}px ${cursorPos.y}px, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%)`,
-            maskRepeat: "no-repeat",
-            maskPosition: "0 0",
-            maskSize: "cover",
           }}
         />
       )}
