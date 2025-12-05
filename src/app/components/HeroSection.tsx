@@ -54,7 +54,7 @@ const HeroSection = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('thrift2.jpg')" }}
+        style={{ backgroundImage: "url('thrift.jpg')" }}
       />
 
       {/* Dim overlay with blur + "hole" under cursor only on desktop */}
