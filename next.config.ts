@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: process.env.PAGES_BASE_PATH,
-  basePath: "/Humane",
   // assetPrefix: "/Humane",
   // outputFileTracingRoot: __dirname,
 };
