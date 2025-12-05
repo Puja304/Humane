@@ -57,16 +57,6 @@ const HeroSection = () => {
         style={{ backgroundImage: "url('thrift.jpg')" }}
       />
 
-      {/* Dim overlay with blur + "hole" under cursor only on desktop */}
-      {isDesktop && (
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundColor: "rgba(255,255,255,0.15)",
-          }}
-        />
-      )}
-
       {/* Text box always fully visible */}
       <div className="absolute inset-y-0 left-6 sm:left-10 flex flex-col justify-center px-4 sm:px-6 py-3 sm:py-4 max-w-xl">
         <h1

@@ -43,7 +43,7 @@ const DonationNoteOrgs = () => {
                     <p>Thank you for helping keep our community warm and making sure clothing stays out of the landfill! </p>
                </div>
                <div className={`${bree.className} donation-note-sign-off lg:text-2xl mt-10 text-gray-600`}>
-                <p className="text-center">- With heart,<br/>Humane<br/>The Thirft Store</p>
+                <p className="text-center">- With heart,<br/>Humane<br/>The Thrift Store</p>
                </div>
                <div className="donation-note-img sm:mt-3 md:mt-3 lg:mt-5">
                     <img src='./circle-logo.png'
