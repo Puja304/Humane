@@ -13,7 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Donate() {
 
     const [showFooter, setShowFooter] = useState(false);
-    const [gridState, setGridState] = useState("dos"); // begin with dos
     const pageRef = useRef<HTMLDivElement>(null);
 
  
@@ -55,36 +54,29 @@ export default function Donate() {
                     <h1 className={` ${bree.className} donation-title text-2xl text-main-blue font-bold`}> Donate With Us</h1>
                     <h3 className={` ${quicksand.className} text-sm md:text-lg px-4`}>Let's stitch a better future together, one piece at a time!</h3>
                 </div>
-                <div className="donation-dos-donts bg-main-blue rounded-xl flex flex-col p-10 w-9/10 md:w-3/5 items-center animate-on-scroll">
-                <div className="items-we">
-                    <h3 className={`text-white ${bree.className} mb-2`}>Items We</h3>
-                </div>
-                    <div className="donation-toggle relative inline-flex bg-black rounded-full p-1 mb-10 w-1/1 md:w-1/4">
 
-                        <div
-                            className={`absolute top-0 left-0 h-full w-1/2 bg-highlight rounded-full transition-transform duration-300 ${
-                            gridState === "dos" ? "translate-x-0" : "translate-x-full"
-                            }`}
-                        ></div>
-                        <button
-                            className="relative w-1/2 text-center z-10 text-white font-semibold"
-                            onClick={() => setGridState("dos")}
-                        >
-                        Accept
-                        </button>
-                        <button
-                            className="relative w-1/2 text-center z-10 text-white font-semibold"
-                            onClick={() => setGridState("donts")}
-                        >
-                            Don’t Accept
-                        </button>
+
+                <div className="donation-dos bg-main-blue rounded-xl flex flex-col p-10 w-9/10 md:w-3/5 items-center animate-on-scroll">
+                    <div className="items-we">
+                        <h3 className={`text-white ${bree.className} mb-2`}>Items We Accept</h3>
                     </div>
-                    {!showFooter && <h3 className={` ${quicksand.className} text-white`}>(Click to see more details!)</h3>}
-                    <div className="dos-dons-grid-render w-1/1 mt-10">
-                        <DosDontsGrid 
-                            mode={gridState}
-                        />
+                        {!showFooter && <h3 className={` ${quicksand.className} text-white`}>(Click to see more details!)</h3>}
+                        <div className="dos-dons-grid-render w-1/1 mt-10">
+                            <DosDontsGrid 
+                                mode={"dos"}
+                            />
+                        </div>
+                </div>
+                <div className="donation-donts bg-main-blue rounded-xl flex flex-col p-10 w-9/10 md:w-3/5 items-center animate-on-scroll mt-10">
+                    <div className="items-we">
+                        <h3 className={`text-white ${bree.className} mb-2`}>Items We Do NOT Accept</h3>
                     </div>
+                        {!showFooter && <h3 className={` ${quicksand.className} text-white`}>(Click to see more details!)</h3>}
+                        <div className="dos-dons-grid-render w-1/1 mt-10">
+                            <DosDontsGrid 
+                                mode={"donts"}
+                            />
+                        </div>
                 </div>
                 
             </div>
