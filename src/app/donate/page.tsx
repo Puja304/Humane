@@ -56,6 +56,9 @@ export default function Donate() {
                     <h3 className={` ${quicksand.className} text-sm md:text-lg px-4`}>Let's stitch a better future together, one piece at a time!</h3>
                 </div>
                 <div className="donation-dos-donts bg-main-blue rounded-xl flex flex-col p-10 w-9/10 md:w-3/5 items-center animate-on-scroll">
+                <div className="items-we">
+                    <h3 className={`text-white ${bree.className} mb-2`}>Items We</h3>
+                </div>
                     <div className="donation-toggle relative inline-flex bg-black rounded-full p-1 mb-10 w-1/1 md:w-1/4">
 
                         <div
@@ -67,7 +70,7 @@ export default function Donate() {
                             className="relative w-1/2 text-center z-10 text-white font-semibold"
                             onClick={() => setGridState("dos")}
                         >
-                        Do Accept
+                        Accept
                         </button>
                         <button
                             className="relative w-1/2 text-center z-10 text-white font-semibold"
@@ -76,6 +79,7 @@ export default function Donate() {
                             Don’t Accept
                         </button>
                     </div>
+                    {!showFooter && <h3 className={` ${quicksand.className} text-white`}>(Click to see more details!)</h3>}
                     <div className="dos-dons-grid-render w-1/1 mt-10">
                         <DosDontsGrid 
                             mode={gridState}
@@ -87,7 +91,7 @@ export default function Donate() {
         </div>
         <div className="other-opportunities flex flex-col items-center mb-10 animate-on-scroll">
             <h1 className={` ${bree.className} opportunities-note text-2xl text-main-blue font-bold`}> Other Opportunities</h1>
-            <h3 className={` ${quicksand.className} text-sm md:text-lg w-3/5 mt-5 px-4`}>No items to donate for the store? No problem! Any items that we have too many of, have been in our store for too long, or are clean/wearable save for Minor cosmetic damage are passed on to Calgary Drop-in Centre, Good Neighbor and other small local organizations based on what their needs are at the time. We will surely be giving updates on the latest needs.</h3>
+            <h3 className={` ${quicksand.className} text-sm md:text-lg mt-5 px-4 text-center md:w-3/4`}>No items to donate for the store? No problem! Any items that we have too many of, have been in our store for too long, or are clean/wearable save for Minor cosmetic damage are passed on to Calgary Drop-in Centre, Good Neighbor and other small local organizations based on what their needs are at the time. We will surely be giving updates on the latest needs.</h3>
         </div>
         <div className="donation-note-confused flex flex-col items-center mb-10 animate-on-scroll">
             <h1 className={` ${bree.className} confused-title text-2xl text-main-blue font-bold`}> Confused?</h1>

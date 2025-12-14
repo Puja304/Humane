@@ -87,27 +87,33 @@ export const DOS: DosDontItem[] = [
 // all don't items
 export const DONTS: DosDontItem[] = [
     {
+        id: "damaged",
+        title: "Damaged Items (Unusable)",
+        description: "No torn, soiled, stained, or otherwise damaged goods" ,
+        icon: "damaged"
+    },
+    {
         id: "bedding",
         title: "Bedding",
-        description: "Mattresses, pillows, blankets, sheets" ,
+        description: "No mattresses, pillows, blankets, sheets" ,
         icon: "bedding"
     },
     {
         id: "kids",
         title: "Children's Items",
-        description: "Kids toys, clothings, and other items" ,
+        description: "No kids toys, clothings, and other items" ,
         icon: "kids"
     },
         {
         id: "pets",
         title: "Pet's Items",
-        description: "Pet carriers, bedding, crates, toys, food, and other items" ,
+        description: "No pet carriers, bedding, crates, toys, food, and other items" ,
         icon: "pets"
     },
     {
         id: "ceiling-lights",
         title: "Ceiling Lights",
-        description: "Ceiling Lights" ,
+        description: "No ceiling Lights" ,
         icon: "ceiling-lights"
     },
     {
