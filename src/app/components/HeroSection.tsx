@@ -48,7 +48,7 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-[100vh] sm:min-h-[100vh] md:h-[600px] lg:h-screen overflow-hidden flex"
+      className="relative w-full h-screen overflow-hidden flex"
       onMouseMove={handleMouseMove}
     >
       {/* Background image */}

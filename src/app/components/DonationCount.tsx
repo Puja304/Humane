@@ -43,7 +43,7 @@ const DonationCount  = () => {
         containerRef.current = node; // for gsap
       }}
 
-      className="donation-box bg-sky-900 flex flex-col lg:flex-col items-center justify-center text-center py-40 px-4 sm:px-6 md:px-12 h-screen md:h-250 lg:h-250 gap-30"
+      className="donation-box bg-sky-900 flex flex-col lg:flex-col items-center justify-center text-center  min-h-screen gap-30"
     >
         <div>
           <div className={`${bree.className} text-white text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide flex flex-col`}>
@@ -62,11 +62,11 @@ const DonationCount  = () => {
               Clothing Items
           </div>
         </div>
-        <div className="relative flex -mt-10 justify-center items-center hover:-translate-y-2 bg-remove">
+        <div className="relative flex justify-center items-center hover:-translate-y-2 bg-remove">
         <img
           src="./rack.png"
           alt="thift 1"
-          className=""
+          className="max-w-9/10"
         />
       </div>
     </div>

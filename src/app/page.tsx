@@ -76,11 +76,10 @@ export default function Home() {
           <Header />
 
           <FullPageScroll>
-          <section className="panel h-screen"><HeroSection /></section>
-          <section className="panel h-screen"><FeaturedItems /></section>
-          <section className="panel h-screen"><DonationCount /></section>
-          <section className="panel h-screen"><DonationNoteOrgs /></section>
-          {<div className={showFooter ? "h-1" : "display-none"}></div>}
+          <section className="panel h-screen snap-start"><HeroSection /></section>
+          <section className="panel h-screen snap-start"><FeaturedItems /></section>
+          <section className="panel h-screen snap-start"><DonationCount /></section>
+          <section className="panel h-screen snap-start"><DonationNoteOrgs /></section>
         </FullPageScroll>
         {showFooter && <Footer />}
         </div>

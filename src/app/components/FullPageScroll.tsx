@@ -23,7 +23,7 @@ export default function FullPageScroll({ children }: { children: React.ReactNode
     // Set heights per breakpoint
     sections.forEach((section) => {
       if (window.innerWidth >= 768) {
-        section.style.height = "100vh"; // desktop: full screen
+        section.style.height = "100dvh"; // desktop: full screen
       } else {
         section.style.height = "auto"; // mobile: natural height
       }
@@ -58,7 +58,7 @@ export default function FullPageScroll({ children }: { children: React.ReactNode
             pin: true,
             scrub: 1,
             snap: 1 / (sections.length - 1),
-            end: () => `+=${container.offsetHeight}`,
+            end: () => "+=" + window.innerHeight * (sections.length - 1),
           },
         });
         }
@@ -66,7 +66,6 @@ export default function FullPageScroll({ children }: { children: React.ReactNode
         if (isMobile) {
           sections.forEach((s) => (s.style.height = "auto"));
           container.style.overflow = "visible";
-          // On mobile you might want normal scroll (no snapping)
           gsap.to(sections, {
             y: 0,
             scrollTrigger: {
