@@ -91,7 +91,7 @@ export default function Donate() {
         </div>
         <div className="donation-note-confused flex flex-col items-center mb-10 animate-on-scroll">
             <h1 className={` ${bree.className} confused-title text-2xl text-main-blue font-bold`}> Confused?</h1>
-            <h3 className={` ${quicksand.className} text-sm md:text-lg mt-5 px-4`}>Don't hesitate to contact us! We hate to turn anyone down and will do our best to accomodate your needs</h3>
+            <h3 className={` ${quicksand.className} text-sm md:text-lg mt-5 px-12`}>Don't hesitate to contact us! We hate to turn anyone down and will do our best to accomodate your needs</h3>
         </div>
         {showFooter && <Footer/>}
         </div>
