@@ -87,11 +87,11 @@ export default function Donate() {
         </div>
         <div className="other-opportunities flex flex-col items-center mb-10 animate-on-scroll">
             <h1 className={` ${bree.className} opportunities-note text-2xl text-main-blue font-bold`}> Other Opportunities</h1>
-            <h3 className={` ${quicksand.className} text-sm md:text-lg w-3/5 mt-5`}>No items to donate for the store? No problem! Any items that we have too many of, have been in our store for too long, or are clean/wearable save for Minor cosmetic damage are passed on to Calgary Drop-in Centre, Good Neighbor and other small local organizations based on what their needs are at the time. We will surely be giving updates on the latest needs.</h3>
+            <h3 className={` ${quicksand.className} text-sm md:text-lg w-3/5 mt-5 px-4`}>No items to donate for the store? No problem! Any items that we have too many of, have been in our store for too long, or are clean/wearable save for Minor cosmetic damage are passed on to Calgary Drop-in Centre, Good Neighbor and other small local organizations based on what their needs are at the time. We will surely be giving updates on the latest needs.</h3>
         </div>
         <div className="donation-note-confused flex flex-col items-center mb-10 animate-on-scroll">
             <h1 className={` ${bree.className} confused-title text-2xl text-main-blue font-bold`}> Confused?</h1>
-            <h3 className={` ${quicksand.className} text-sm md:text-lg mt-5 px-12`}>Don't hesitate to contact us! We hate to turn anyone down and will do our best to accomodate your needs</h3>
+            <h3 className={` ${quicksand.className} text-sm md:text-lg mt-5 px-4`}>Don't hesitate to contact us! We hate to turn anyone down and will do our best to accomodate your needs</h3>
         </div>
         {showFooter && <Footer/>}
         </div>
