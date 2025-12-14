@@ -2,11 +2,14 @@
 :root {
   --background: #cce9f6;
   --foreground: #171717;
+  
 }
 
 @theme {
   --color-bright-count: ##7ed957;
   --color-note-bg: #f0f2f7;
+  --color-highlight:  #ee6c4d;
+  --color-main-blue: #223959;
 }
 
 
@@ -46,3 +49,4 @@ body {
 .animate-fade-in-down {
   animation: fade-in-down 0.25s ease-out both;
 }
+

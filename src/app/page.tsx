@@ -14,7 +14,7 @@ import DonationNoteOrgs from "./components/DonationNoteOrgs";
 
 
 export default function Home() {
- const [showPage, setShowPage] = useState(false);
+  const [showPage, setShowPage] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const [showFooter, setShowFooter] = useState(false);
 

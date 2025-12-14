@@ -44,6 +44,14 @@ export const Footer = () => {
                     Contact Us
                 </Link>
               </li>
+                            <li>
+                <Link
+                    href="/donate"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                    Donate
+                </Link>
+              </li>
             </ul>
           </div>
           
