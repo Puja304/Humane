@@ -38,7 +38,7 @@ const DonationNoteOrgs = () => {
         <div
         ref={containerRef} 
         className="w-screen h-screen bg-sky-900 flex flex-col items-center justify-center ">
-            <div className="donation-note-overlay max-w-9/10 sm:mx-20 lg:mx-120 bg-note-bg/60 backdrop-blur-lg rounded-2xl p-10 flex flex-col items-center sm:py-15 md:py-20 lg:py-10">
+            <div className="donation-note-overlay max-w-9/10 bg-note-bg/60 backdrop-blur-lg rounded-2xl p-10 flex flex-col items-center sm:py-15 md:py-20 lg:py-10 sm:px-30">
                <div className={`${bree.className} donation-note-main text-gray-600 lg:text-2xl md:text-lg sm:w-50 lg:w-150`}>
                     <p>Thank you for helping keep our community warm and making sure clothing stays out of the landfill! </p>
                </div>
