@@ -37,12 +37,12 @@ const DonationNoteOrgs = () => {
     return (
         <div
         ref={containerRef} 
-        className="w-screen h-screen bg-sky-900 flex flex-col items-center justify-center ">
+        className="w-screen h-screen bg-sky-900 flex flex-col items-center justify-between py-[20vh]">
             <div className="donation-note-overlay max-w-9/10 bg-note-bg/60 backdrop-blur-lg rounded-2xl p-10 flex flex-col items-center sm:py-15 md:py-20 lg:py-10 sm:px-30">
                <div className={`${bree.className} donation-note-main text-gray-600 lg:text-2xl md:text-lg sm:w-50 lg:w-150`}>
                     <p>Thank you for helping keep our community warm and making sure clothing stays out of the landfill! </p>
                </div>
-               <div className={`${bree.className} donation-note-sign-off lg:text-2xl mt-10 text-gray-600`}>
+               <div className={`${bree.className} donation-note-sign-off lg:text-2xl text-gray-600`}>
                 <p className="text-center">- With heart,<br/>Humane<br/>The Thrift Store</p>
                </div>
                <div className="donation-note-img sm:mt-3 md:mt-3 lg:mt-5">
@@ -58,8 +58,8 @@ const DonationNoteOrgs = () => {
                     />
                </div>
             </div>
-            <div className="donation-orgs flex flex-col items-center mt-10 sm:mt-6 md:mt-15 lg:mt-20 mx-22">
-                <div className={`${bree.className} donation-orgs-heading underline text-white text-lg md:text-lg lg:text-3xl mb-2 lg:mb-5`}>
+            <div className="donation-orgs flex flex-col items-center mx-22">
+                <div className={`${bree.className} donation-orgs-heading underline mt-[10vh] md:mt-0 text-white text-lg md:text-lg lg:text-3xl`}>
                     Organisations Helped
                 </div>
                 <div className={`${playfair.className} font-light donations-orgs-content text-white `}>
