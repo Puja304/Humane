@@ -58,11 +58,11 @@ const DonationNoteOrgs = () => {
                     />
                </div>
             </div>
-            <div className="donation-orgs flex flex-col items-center mx-22">
+            <div className="donation-orgs flex flex-col items-center mx-22 gap-y-3 md:gap-y-4 lg:gap-y-6">
                 <div className={`${bree.className} donation-orgs-heading underline text-white text-lg md:text-lg lg:text-3xl`}>
                     Organisations Helped
                 </div>
-                <div className={`${playfair.className} font-light donations-orgs-content text-white `}>
+                <div className={`${playfair.className} font-light donations-orgs-content text-white`}>
                     <ul className="list-disc space-y-2 text-m sm:text-m md:text-lg lg:text-xl">
                         <li>Calgary Drop-in Center</li>
                         <li>Good Neighbour</li>
