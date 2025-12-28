@@ -58,9 +58,10 @@ const HeroSection = () => {
       />
 
       {/* Text box always fully visible */}
-      <div className="absolute inset-y-0 left-6 sm:left-10 flex flex-col justify-center px-4 sm:px-6 py-3 sm:py-4 max-w-xl">
+      <div className="absolute inset-y-0 left-6 sm:left-10 flex flex-col justify-center px-4 sm:px-6 py-3 sm:py-4 max-w-xl bg-white/5 backdrop-blur-xs
+                rounded-xl shadow-lg max-h-fit self-center">
         <h1
-          className={`${bree.className} text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-400 to-sky-200 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] leading-[1.05]`}
+          className={`${bree.className} text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-extrabold bg-clip-text text-sky-400 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] leading-[1.05]`}
         >
           Humane<br/>The Thrift Store
         </h1>

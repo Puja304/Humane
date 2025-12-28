@@ -47,18 +47,18 @@ export default function Donate() {
         <div className="donation-page-body mt-11">
             <div className={` ${quicksand.className} discount-note bg-highlight mt-13 text-white py-5 text-center text-md animate-on-scroll`}>
                 <h1 className="text-xl animate-bounce"><b>10% off!</b></h1>
-                <p className="text-sm">Bring in a bag of donations and enjoy 10% off on your next purchase!</p>
+                <p className="text-sm font-bold">Bring in a bag of donations and enjoy 10% off on your next purchase!</p>
             </div>
             <div className="donations-details flex flex-col items-center py-10 w-screen">
                 <div className="donation-titles flex flex-col items-center mb-10 animate-on-scroll">
                     <h1 className={` ${bree.className} donation-title text-2xl text-main-blue font-bold`}> Donate With Us</h1>
-                    <h3 className={` ${quicksand.className} text-sm md:text-lg px-4`}>Let's stitch a better future together, one piece at a time!</h3>
+                    {/* <h3 className={` ${quicksand.className} text-sm md:text-lg px-4`}>Let's stitch a better future together, one piece at a time!</h3> */}
                 </div>
 
 
                 <div className="donation-dos bg-main-blue rounded-xl flex flex-col p-10 w-9/10 md:w-3/5 items-center animate-on-scroll">
                     <div className="items-we">
-                        <h3 className={`text-white ${bree.className} mb-2`}>Items We Accept</h3>
+                        <h3 className={`text-white ${bree.className} mb-2 text-lg md:text-2xl`}>Items We Accept</h3>
                     </div>
                         {!showFooter && <h3 className={` ${quicksand.className} text-white`}>(Click to see more details!)</h3>}
                         <div className="dos-dons-grid-render w-1/1 mt-10">
@@ -69,7 +69,7 @@ export default function Donate() {
                 </div>
                 <div className="donation-donts bg-main-blue rounded-xl flex flex-col p-10 w-9/10 md:w-3/5 items-center animate-on-scroll mt-10">
                     <div className="items-we">
-                        <h3 className={`text-white ${bree.className} mb-2`}>Items We Do NOT Accept</h3>
+                        <h3 className={`text-white ${bree.className} mb-2 text-lg md:text-2xl`}>Items We Do NOT Accept</h3>
                     </div>
                         {!showFooter && <h3 className={` ${quicksand.className} text-white`}>(Click to see more details!)</h3>}
                         <div className="dos-dons-grid-render w-1/1 mt-10">
