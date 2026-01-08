@@ -54,19 +54,19 @@ const HeroSection = () => {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('thrift.jpg')" }}
+        style={{ backgroundImage: "url('thrift4.jpeg')" }}
       />
 
       {/* Text box always fully visible */}
-      <div className="absolute inset-y-0 left-6 sm:left-10 flex flex-col justify-center px-4 sm:px-6 py-3 sm:py-4 max-w-xl bg-white/5 backdrop-blur-xs
+      <div className="absolute inset-y-0 sm:left-10 flex flex-col justify-center text-center items-center px-4 sm:px-6 py-3 sm:py-4 max-w-xl bg-white/5 backdrop-blur-xs
                 rounded-xl shadow-lg max-h-fit self-center">
         <h1
           className={`${bree.className} text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-extrabold bg-clip-text text-sky-400 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] leading-[1.05]`}
         >
-          Humane<br/>The Thrift Store
+          Humane<br/>the thrift store
         </h1>
-        <p className="mt-2 sm:mt-3 text-lg sm:text-xl md:text-2xl text-sky-100 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
-          where every purchase makes a difference
+        <p className="mt-2 sm:mt-3 text-md sm:text-xl md:text-2xl text-sky-100 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+          <i>where every purchase makes a difference</i>
         </p>
       </div>
     </section>

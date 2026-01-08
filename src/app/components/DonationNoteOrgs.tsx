@@ -1,5 +1,5 @@
 "use client"
-import { bree, playfair } from "../../fonts";
+import { bree, playfair, quicksand } from "../../fonts";
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useRef,useEffect,useState } from "react";
@@ -59,10 +59,10 @@ const DonationNoteOrgs = () => {
                </div>
             </div>
             <div className="donation-orgs flex flex-col items-center mx-22 gap-y-3 md:gap-y-4 lg:gap-y-6">
-                <div className={`${bree.className} donation-orgs-heading underline text-white text-lg md:text-lg lg:text-3xl`}>
+                <div className={`${bree.className} donation-orgs-heading text-white text-lg md:text-lg lg:text-3xl`}>
                     Organisations Helped
                 </div>
-                <div className={`${playfair.className} font-light donations-orgs-content text-white`}>
+                <div className={`${quicksand.className} donations-orgs-content text-white font-bold`}>
                     <ul className="list-disc space-y-2 text-m sm:text-m md:text-lg lg:text-xl">
                         <li>Calgary Drop-in Center</li>
                         <li>Good Neighbour</li>

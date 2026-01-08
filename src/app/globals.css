@@ -6,10 +6,12 @@
 }
 
 @theme {
-  --color-bright-count: ##7ed957;
+  --color-bright-count: #7ed957;
   --color-note-bg: #f0f2f7;
   --color-highlight:  #ee6c4d;
-  --color-main-blue: #223959;
+  --color-main-blue: #253959;
+  --color-hero-blue: #09acf4;
+  --color-header-button: #357aca;
 }
 
 

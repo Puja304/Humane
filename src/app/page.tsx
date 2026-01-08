@@ -77,7 +77,7 @@ export default function Home() {
 
           <FullPageScroll>
           <section className="panel h-screen snap-start"><HeroSection /></section>
-          <section className="panel h-screen snap-start"><FeaturedItems /></section>
+          {/* <section className="panel h-screen snap-start"><FeaturedItems /></section> */}
           <section className="panel h-screen snap-start"><DonationCount /></section>
           <section className="panel h-screen snap-start"><DonationNoteOrgs /></section>
         </FullPageScroll>
