@@ -2,15 +2,48 @@
 import Header from "../components/HeaderNew";
 import { Footer } from "../components/Footer";
 import { bree,quicksand } from "@/fonts";
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useRef,useEffect,useState } from "react";
+
+//registed plugin
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+  if (!containerRef.current) return;
+
+  gsap.fromTo(
+      containerRef.current,
+      {
+      opacity: 0,
+      x: 100, 
+      },
+      {
+      opacity: 1,
+      x: 0, 
+      y: 0, 
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          toggleActions: "play play none none",
+      },
+      }
+  );
+  }, []);
+
   return (
     <div className="flex flex-col align-center bg-sky-900">
       <Header/>
       <div className={`contact-us-block bg-sky-900 pt-20 min-h-screen flex flex-col items-center rounded-xl w-screen self-center px-8 sm:px-12 md:px-16 lg:px-20 xl:px-25 py-15 mb-20 overflow-hidden text-center lg:mt-10`}>
         <p className={`contact-greeting text-white ${bree.className} text-2xl`}>We'd love to hear from you!</p>
         <p className={`contact-greeting text-white ${quicksand.className} text-xl mt-10`}>Whether you have questions, want to donate, or are looking for something specific, our team is here to help.</p>
-        <div className="ccontact-grid grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-4 mt-25 h-full">
+        <div className="ccontact-grid grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-4 mt-25 h-full" ref={containerRef}>
           <div className="location bg-white/20 rounded-xl p-4 py-16 lg:p-16">
             <h1 className={`location-title ${bree.className} text-xl text-white`}>📍Location</h1>
              <p className="mt-5">
@@ -24,7 +57,7 @@ export default function Contact() {
           </div>
           <div className="bg-white/20 rounded-xl p-4 py-16 lg:p-16">
             <h1 className={`store-hours-title ${bree.className} text-xl text-white `}>🕒 Store Hours</h1>
-            <p className={` ${quicksand.className} mt-5 text-white`}>10 AM - 8 PM, OPEN DAILY</p>
+            <p className={` ${quicksand.className} mt-5 text-white`}>10 AM - 7 PM, OPEN DAILY</p>
           </div>
           <div className="bg-white/20 rounded-xl p-4 py-16 lg:p-16">
             <h1 className={`email-title ${bree.className} text-xl text-white`}>📧 Email</h1>

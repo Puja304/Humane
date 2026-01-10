@@ -65,7 +65,7 @@ export const DOS: DosDontItem[] = [
     {
         id: "media",
         title: "Media",
-        description: "Books, CDs, DVDs, and Vinyl records" ,
+        description: "Books, CDs, DVDs, Comics, and Vinyl records" ,
         icon: "media"
     },
     {
@@ -119,7 +119,7 @@ export const DONTS: DosDontItem[] = [
     {
         id: "furniture",
         title: "Furniture",
-        description: "Generally no but please EMAIL for approval in special cases" ,
+        description: "No furniture; in special cases, small items may be accepted after prior approval by email" ,
         icon: "furniture"
     },
 ];

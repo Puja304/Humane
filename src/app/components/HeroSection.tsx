@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { bree } from "../../fonts";
+import { bree, imperial_script, rouge_script } from "../../fonts";
 import gsap
  from "gsap";
 const HeroSection = () => {
@@ -58,15 +58,24 @@ const HeroSection = () => {
       />
 
       {/* Text box always fully visible */}
-      <div className="absolute inset-y-0 sm:left-10 flex flex-col justify-center text-center items-center px-4 sm:px-6 py-3 sm:py-4 max-w-xl bg-white/5 backdrop-blur-xs
-                rounded-xl shadow-lg max-h-fit self-center">
-        <h1
-          className={`${bree.className} text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-extrabold bg-clip-text text-sky-400 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] leading-[1.05]`}
-        >
-          Humane<br/>the thrift store
+      <div className="absolute inset-y-0 sm:left-10 flex flex-col justify-center text-centern px-6 md:px-8 lg:px-10 xl:px-16 py-3 sm:py-4 max-w-xl bg-white/8 backdrop-blur-sm
+                rounded-xl shadow-lg max-h-fit self-center text-zinc-300">
+        <img
+         src="./name-with-wings-cropped.png" 
+         alt="Humane Logo" 
+         className="grayscale brightness-400 contrast-120 opacity-90
+            w-48 h-auto
+            sm:w-48
+            md:w-72
+            lg:w-96
+            object-contain"
+         />
+        <h1 
+        className={`${bree.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] leading-[1.05]`}>
+          the thrift store
         </h1>
-        <p className="mt-2 sm:mt-3 text-md sm:text-xl md:text-2xl text-sky-100 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
-          <i>where every purchase makes a difference</i>
+        <p className={`${rouge_script.className} md:mt-2 lg:mt-4 text-lg sm:text-2xl md:text-4xl font-extrabold`}>
+          Ethical&nbsp;•&nbsp;Local&nbsp;•&nbsp;Circular&nbsp;
         </p>
       </div>
     </section>

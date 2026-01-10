@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { bree, rouge_script } from "@/fonts";
 
 export const Footer = () => {
   return (
@@ -18,11 +19,20 @@ export const Footer = () => {
                     className="h-5 w-8"
                 />
                 </button>
-              <span className="text-lg font-bold">Humane Thrift</span>
+                <Image
+                  src="./name-logo.png"
+                  alt="Wings"
+                  width={40}
+                  height={20}
+                  className="w-24"
+                />
             </div>
-            <p className="text-sm text-muted-foreground">
-              Quality pre-loved fashion supporting local communities across Canada.
+            <p className={`${bree.className} text-sm text-muted-foreground`}>
+              Thoughtfully curated fashion that gives back to the community
             </p>
+            <p className={`${rouge_script.className} md:mt-2 lg:mt-4 text-sm sm:text-lg md:text-xl font-extrabold`}>
+                      Ethical&nbsp;•&nbsp;Local&nbsp;•&nbsp;Circular&nbsp;
+              </p>
           </div>
           
           <div>
@@ -60,15 +70,15 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                hello@thrifthub.ca
+                humanethethriftstore@gmail.com
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                (555) 123-4567
+                +1 (587) 718-8848
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                Toronto, ON, Canada
+                1431 Kensington Rd, NW, Calgary, AB, T2N 3R1
               </li>
             </ul>
           </div>

@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, IM_Fell_DW_Pica_SC, Jacquard_24,Quicksand, Merriweather, Bree_Serif } from "next/font/google";
+import { Inter, Playfair_Display, IM_Fell_DW_Pica_SC, Jacquard_24,Quicksand, Merriweather, Bree_Serif, Imperial_Script, Rouge_Script } from "next/font/google";
 
 export const quicksand = Quicksand({
   subsets: ["latin"],
@@ -34,3 +34,13 @@ export const jacquard = Jacquard_24({
    weight: "400",
    subsets: ["latin"] 
 });
+
+export const imperial_script = Imperial_Script({
+  weight: "400",
+  subsets: ["latin"]
+})
+
+export const rouge_script = Rouge_Script({
+   weight: "400",
+  subsets: ["latin"]
+})

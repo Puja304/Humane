@@ -74,7 +74,8 @@ export default function Home() {
       {showPage && (
         <div  className="home-page flex flex-col">
           <Header />
-
+          <div className="hidden lg:flex h-14 w-full">
+          </div>
           <FullPageScroll>
           <section className="panel h-screen snap-start"><HeroSection /></section>
           {/* <section className="panel h-screen snap-start"><FeaturedItems /></section> */}
