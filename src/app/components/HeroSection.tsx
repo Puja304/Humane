@@ -52,13 +52,19 @@ const HeroSection = () => {
       onMouseMove={handleMouseMove}
     >
       {/* Background image */}
-        <div
-          className="
-            absolute inset-0 bg-cover bg-center
-            bg-[url('/thrift-mobile-2.jpeg')]      /* default for small screens */
-            md:bg-[url('/thrift4.jpeg')] /* overrides for md and above */
-          "
-        />
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${'/thrift-mobile-2.jpeg'})`,
+        }}
+      />
+
+      <div
+        className="absolute inset-0 bg-cover bg-center hidden md:block"
+        style={{
+          backgroundImage: `url(${'/thrift4.jpeg'})`,
+        }}
+      />
 
       {/* Text box always fully visible */}
       <div className="relative inset-y-0 sm:left-10 flex flex-col justify-center items-center text-center px-6 md:px-8 lg:px-10 xl:px-16 py-3 sm:py-4 self-center text-zinc-300">
