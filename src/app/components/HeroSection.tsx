@@ -48,36 +48,90 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden flex"
+      className="relative w-full h-screen overflow-hidden flex justify-center md:justify-start"
       onMouseMove={handleMouseMove}
     >
       {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('thrift4.jpeg')" }}
-      />
+        <div
+          className="
+            absolute inset-0 bg-cover bg-center
+            bg-[url('/thrift-mobile-2.jpeg')]      /* default for small screens */
+            md:bg-[url('/thrift4.jpeg')] /* overrides for md and above */
+          "
+        />
 
       {/* Text box always fully visible */}
-      <div className="absolute inset-y-0 sm:left-10 flex flex-col justify-center text-centern px-6 md:px-8 lg:px-10 xl:px-16 py-3 sm:py-4 max-w-xl bg-white/8 backdrop-blur-sm
-                rounded-xl shadow-lg max-h-fit self-center text-zinc-300">
-        <img
-         src="./name-with-wings-cropped.png" 
-         alt="Humane Logo" 
-         className="grayscale brightness-400 contrast-120 opacity-90
-            w-48 h-auto
-            sm:w-48
-            md:w-72
-            lg:w-96
-            object-contain"
-         />
-        <h1 
-        className={`${bree.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] leading-[1.05]`}>
-          the thrift store
-        </h1>
-        <p className={`${rouge_script.className} md:mt-2 lg:mt-4 text-lg sm:text-2xl md:text-4xl font-extrabold`}>
-          Ethical&nbsp;•&nbsp;Local&nbsp;•&nbsp;Circular&nbsp;
-        </p>
-      </div>
+      <div className="relative inset-y-0 sm:left-10 flex flex-col justify-center items-center text-center px-6 md:px-8 lg:px-10 xl:px-16 py-3 sm:py-4 self-center text-zinc-300">
+      {/* SHAPE LAYER (defines the blob)
+      <div
+        className="
+          absolute
+          left-1/2 top-1/2
+          w-[36rem] h-[28rem]
+          -translate-x-1/2 -translate-y-1/2
+          bg-blue-200/55
+          opacity-80
+          pointer-events-none
+          animate-blob
+        "
+      />
+
+      {/* GLOW LAYER (softens it) */}
+      {/* <div
+        className="
+          absolute
+          left-1/2 top-1/2
+          w-[30rem] h-[24rem]
+          -translate-x-1/2 -translate-y-1/2
+          bg-blue-100/30
+          blur-3xl
+          opacity-90
+          pointer-events-none
+          animate-blob
+        "
+      /> */} 
+
+        <div
+      className="
+        absolute
+        left-1/2 top-1/2
+        w-[20rem] h-[14rem]
+        -translate-x-1/2 -translate-y-1/2
+        bg-black/20
+        blur-xl
+        opacity-75
+        pointer-events-none
+        border-red-400
+      "
+    />
+    
+
+
+      {/* CONTENT */}
+      <img
+        src="./name-with-wings-cropped.png"
+        alt="Humane Logo"
+        className="
+          relative
+          grayscale brightness-400 contrast-120 opacity-90
+          w-48 sm:w-48 md:w-72 lg:w-96
+          object-contain
+        "
+      />
+
+      <h1
+        className={`${bree.className} relative text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] leading-[1.05]`}
+      >
+        the thrift store
+      </h1>
+
+      <p
+        className={`${rouge_script.className} relative md:mt-2 lg:mt-4 text-lg sm:text-2xl md:text-4xl text-white font-extrabold drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]`}
+      >
+        Ethical&nbsp;•&nbsp;Local&nbsp;•&nbsp;Circular&nbsp;
+      </p>
+    </div>
+
     </section>
   );
 };
