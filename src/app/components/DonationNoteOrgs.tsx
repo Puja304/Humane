@@ -38,6 +38,19 @@ const DonationNoteOrgs = () => {
         <div
         ref={containerRef} 
         className="w-screen min-h-screen max-h-screen bg-sky-900 flex flex-col items-center justify-center gap-[10vh] overflow-hidden">
+                        <div className="donation-orgs flex flex-col items-center mx-22 gap-y-3 md:gap-y-4 lg:gap-y-6">
+                <div className={`${bree.className} donation-orgs-heading text-white text-lg md:text-lg lg:text-3xl`}>
+                    Organisations Helped
+                </div>
+                <div className={`${quicksand.className} donations-orgs-content text-white font-bold`}>
+                    <ul className="list-disc space-y-2 text-m sm:text-m md:text-lg lg:text-xl">
+                        <li>Calgary Drop-in Center</li>
+                        <li>Good Neighbour</li>
+                        <li>Sheldon Chumir Health Center Urgent Care</li>
+                    </ul>
+                </div>
+            </div>
+            
             <div className="donation-note-overlay max-w-9/10 bg-note-bg/60 backdrop-blur-lg rounded-2xl p-10 flex flex-col items-center sm:py-15 md:py-20 lg:py-10 sm:px-30">
                <div className={`${bree.className} donation-note-main text-gray-600 lg:text-2xl md:text-lg sm:w-50 lg:w-150`}>
                     <p>Thanks for helping good clothes go where they're needed!</p>
@@ -57,18 +70,6 @@ const DonationNoteOrgs = () => {
                         "
                     />
                </div>
-            </div>
-            <div className="donation-orgs flex flex-col items-center mx-22 gap-y-3 md:gap-y-4 lg:gap-y-6">
-                <div className={`${bree.className} donation-orgs-heading text-white text-lg md:text-lg lg:text-3xl`}>
-                    Organisations Helped
-                </div>
-                <div className={`${quicksand.className} donations-orgs-content text-white font-bold`}>
-                    <ul className="list-disc space-y-2 text-m sm:text-m md:text-lg lg:text-xl">
-                        <li>Calgary Drop-in Center</li>
-                        <li>Good Neighbour</li>
-                        <li>Sheldon Chumir Health Center Urgent Care</li>
-                    </ul>
-                </div>
             </div>
         </div>
     );
