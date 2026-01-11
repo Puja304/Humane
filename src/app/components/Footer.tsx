@@ -5,7 +5,7 @@ import { bree, rouge_script } from "@/fonts";
 
 export const Footer = () => {
   return (
-    <footer className="bg-secondary flex flex-col items-center justify-center w-full h-40 opacity-0 lg:opacity-100 ">
+    <footer className="bg-secondary flex flex-col items-center justify-center w-full h-40 opacity-0 lg:opacity-100 z-20">
      <div className="w-full max-w-6xl mx-auto px-4 flex flex-col">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 place-items-center md:place-items-center">
           <div>

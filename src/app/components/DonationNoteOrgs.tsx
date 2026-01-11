@@ -50,10 +50,10 @@ const DonationNoteOrgs = () => {
                     </ul>
                 </div>
             </div>
-            
-            <div className="donation-note-overlay max-w-9/10 bg-note-bg/60 backdrop-blur-lg rounded-2xl p-10 flex flex-col items-center sm:py-15 md:py-20 lg:py-10 sm:px-30">
-               <div className={`${bree.className} donation-note-main text-gray-600 lg:text-2xl md:text-lg sm:w-50 lg:w-150`}>
-                    <p>Thanks for helping good clothes go where they're needed!</p>
+
+            <div className="donation-note-overlay max-w-9/10 bg-note-bg/60 backdrop-blur-lg rounded-2xl p-10 flex flex-col items-center text-center sm:py-15 md:py-20 lg:py-10 sm:px-30">
+               <div className={`${bree.className} donation-note-main text-gray-600 lg:text-2xl md:text-lg sm:w-50 lg:w-180`}>
+                    <p>Thanks for helping good clothes go where they're needed!<br/><br/></p>
                </div>
                <div className={`${bree.className} donation-note-sign-off lg:text-2xl text-gray-600`}>
                 <p className="text-center">- With heart,<br/>Humane<br/>The Thrift Store</p>

@@ -65,13 +65,13 @@ export const DOS: DosDontItem[] = [
     {
         id: "media",
         title: "Media",
-        description: "Books, CDs, DVDs, Comics, and Vinyl records" ,
+        description: "Books, CDs, DVDs, Comics, Vinyl records, and more" ,
         icon: "media"
     },
     {
         id: "collectibles",
         title: "Collectibles and Knick-knacks",
-        description: "Any collectibles or small knick-knacks (figurines, cards, stationery, and more)" ,
+        description: "Any small collectibles or knick-knacks (figurines, cards, stationery, and more)" ,
         icon: "collectibles"
     },
     {
@@ -101,19 +101,19 @@ export const DONTS: DosDontItem[] = [
     {
         id: "kids",
         title: "Children's Items",
-        description: "No kids toys, clothings, and other items" ,
+        description: "No kids toys, clothing, or any other items" ,
         icon: "kids"
     },
         {
         id: "pets",
         title: "Pet's Items",
-        description: "No pet carriers, bedding, crates, toys, food, and other items" ,
+        description: "No pet carriers, bedding, crates, toys, food, or other items" ,
         icon: "pets"
     },
     {
         id: "ceiling-lights",
         title: "Ceiling Lights",
-        description: "No ceiling Lights" ,
+        description: "No ceiling lights" ,
         icon: "ceiling-lights"
     },
     {
