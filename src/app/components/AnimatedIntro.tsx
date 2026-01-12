@@ -39,7 +39,7 @@ const AnimatedIntro = ({ onFinish }: AnimatedIntroProps) => {
         opacity: 0,
         rotation: () => gsap.utils.random(-12, 12), // small random angle
         ease: "elastic.out(1, 0.5)", // bouncy but not too chaotic
-        duration: 1.4,
+        duration: 1,
         stagger: 0.1,
       },
       "-=0.3"
@@ -51,7 +51,7 @@ const AnimatedIntro = ({ onFinish }: AnimatedIntroProps) => {
       {
         y: -30,
         opacity: 0,
-        duration: 0.7,
+        duration: 0.5,
       },
       "-=0.4"
     );
@@ -62,20 +62,20 @@ const AnimatedIntro = ({ onFinish }: AnimatedIntroProps) => {
       {
         y: 40,
         opacity: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power2.out",
       },
       "-=0.2"
     );
 
     // Pause before outro
-    tl.to({}, { duration: 0.7 });
+    tl.to({}, { duration: 0.5 });
 
     // Outro: float upward + fade out
     tl.to(containerRef.current, {
       opacity: 0,
       y: -80,
-      duration: 1,
+      duration: 0.3,
       ease: "power2.inOut",
     });
 
