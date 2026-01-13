@@ -13,7 +13,7 @@ const DonationCount  = () => {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const value = 1000;
+  const value = 2500;
 
   useEffect(() => {
     if (inView && containerRef.current && !hasAnimated) {
