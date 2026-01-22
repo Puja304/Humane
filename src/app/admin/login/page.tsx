@@ -15,7 +15,7 @@ export default function AdminLogin() {
 
         //see if their input was correct
 
-        const res = await fetch("/api/auth/login", {
+        const res = await fetch("/api/admin/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password }),
