@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { cookies } from "next/headers";
+import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
     // extract from the request
@@ -12,25 +12,20 @@ export async function POST(req: Request) {
         return new Response("Invalid Credentials", {status: 401});
     } 
 
-    // We are defining it as a constanta and adding ! as a guarantee to typescript that this exists. It must exist to be able to use it in jwt.sign()
-    const secret = process.env.JWT_SECRET!;
-
     // creae token
-    const token = jwt.sign(
-        { role: "admin" },
-        secret,
-        { expiresIn : "1h"} 
-    );
+    // We are adding an ! as a guarantee to typescript that this exists. It must exist to be able to use it in jwt.sign()
+    const token = jwt.sign({ role: "admin" }, process.env.JWT_SECRET!, { expiresIn: "1h" });
 
-    // set coookie
-    const cookieStore = await cookies();
+    const res = NextResponse.redirect(new URL("/admin", req.url));
 
-    cookieStore.set("admin_token", token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax",
-        path: "/"
+    res.cookies.set({
+    name: "admin_token",
+    value: token,
+    httpOnly: true,
+    path: "/",
+    secure: process.env.NODE_ENV === "production",
+    maxAge: 60 * 60,
     });
 
-    return Response.json({success: true});
+    return res;
 }
