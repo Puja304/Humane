@@ -9,6 +9,7 @@ export async function POST(req: Request) {
         username !== process.env.ADMIN_USER ||
         password !== process.env.ADMIN_PASS
     ) {
+        console.log("Something went wrong")
         return new Response("Invalid Credentials", {status: 401});
     } 
 
@@ -32,5 +33,6 @@ export async function POST(req: Request) {
         path: "/"
     });
 
+    console.log("Sending back success")
     return Response.json({success: true});
 }

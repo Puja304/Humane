@@ -23,11 +23,13 @@ export default function AdminLogin() {
         });
 
         if (!res.ok) {
+            console.log("Invalid creds no cookie")
             setError("Invalid credentials");
             return;
         }
 
         // if the credentials were right, go to admin page
+        console.log("Found cookie, now pushing")
         router.push("/admin");
     }
 
