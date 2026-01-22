@@ -1,38 +1,23 @@
+import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
-import { cookies } from "next/headers";
 
 export async function POST(req: Request) {
-    // extract from the request
-    const { username, password } = await req.json();
+  const { username, password } = await req.json();
 
-    if (
-        username !== process.env.ADMIN_USER ||
-        password !== process.env.ADMIN_PASS
-    ) {
-        console.log("Something went wrong")
-        return new Response("Invalid Credentials", {status: 401});
-    } 
+  if (username !== process.env.ADMIN_USER || password !== process.env.ADMIN_PASS) {
+    return NextResponse.json({ error: "Invalid Credentials" }, { status: 401 });
+  }
 
-    // We are defining it as a constanta and adding ! as a guarantee to typescript that this exists. It must exist to be able to use it in jwt.sign()
-    const secret = process.env.JWT_SECRET!;
+  const token = jwt.sign({ role: "admin" }, process.env.JWT_SECRET!, { expiresIn: "1h" });
 
-    // creae token
-    const token = jwt.sign(
-        { role: "admin" },
-        secret,
-        { expiresIn : "1h"} 
-    );
+  const res = NextResponse.json({ success: true });
+  res.cookies.set("admin_token", token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    path: "/",
+    maxAge: 60 * 60,
+  });
 
-    // set coookie
-    const cookieStore = await cookies();
-
-    cookieStore.set("admin_token", token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax",
-        path: "/"
-    });
-
-    console.log("Sending back success")
-    return Response.json({success: true});
+  return res;
 }
