@@ -6,6 +6,7 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useRef,useEffect,useState } from "react";
 
+//about
 //registed plugin
 gsap.registerPlugin(ScrollTrigger);
 
