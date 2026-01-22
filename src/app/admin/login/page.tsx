@@ -30,7 +30,7 @@ export default function AdminLogin() {
 
         // if the credentials were right, go to admin page
         console.log("Found cookie, now pushing")
-        router.push("/admin");
+        window.location.href = "/admin";
     }
 
     return (
