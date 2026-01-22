@@ -30,3 +30,7 @@ export function middleware( req: NextRequest) {
         return NextResponse.redirect(new URL("/admin/login", req.url));
     }
 }
+
+export const config = {
+  matcher: ["/admin/:path*"], // matches /admin and all subpaths
+};
