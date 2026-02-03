@@ -20,17 +20,6 @@ export function middleware( req: NextRequest) {
         console.log("Did not find token, going back to login")
         return NextResponse.redirect(new URL("/admin/login", req.url));
     }
-
-    try{
-        // try to verify token if it exists
-        jwt.verify(token, process.env.JWT_SECRET!);
-        // correct token, let it go
-        return NextResponse.next();
-    } catch {
-        // incorrect token, redirect to login
-        console.log("Found token but it did not match, going back to login")
-        return NextResponse.redirect(new URL("/admin/login", req.url));
-    }
 }
 
 export const config = {
