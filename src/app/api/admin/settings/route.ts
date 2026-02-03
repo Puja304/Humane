@@ -18,6 +18,7 @@ export async function GET(req: Request) {
 
   // Fetch from DB
   const setting = await getSetting(key);
+  console.log("Found setting:", setting);
 
   return NextResponse.json({ value: setting?.value ?? "" });
 }
