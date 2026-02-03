@@ -1,6 +1,6 @@
 "use client"
 import { quicksand } from "@/fonts";
-import AdminSettings from "@/app/admin/AdminSettings"
+import AdminSettings from "@/app/admin/(protected)/AdminSettings"
 
 export default function Admin() {
     return (
