@@ -13,6 +13,8 @@ export default function AdminLogin() {
     async function handleSubmit(e: React.FormEvent){
         e.preventDefault();
 
+
+        console.log("Env:", process.env.ADMIN_USER)
         //see if their input was correct
 
         const res = await fetch("/api/admin/auth/login", {
