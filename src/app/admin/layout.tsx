@@ -8,9 +8,18 @@ export default async function AdminLayout({
   children: React.ReactNode;
 }) {
   const cookieStore = await cookies();
-
   const token = cookieStore.get("admin_token")?.value;
 
+  // Get current pathname
+  const url = new URL(await import("next/headers").then(h => h.headers().get("x-invoke-url") || ""));
+  const pathname = url.pathname;
+
+  // Skip check for /admin/login
+  if (pathname === "/admin/login") {
+    return <>{children}</>;
+  }
+
+  // Redirect if no token
   if (!token) redirect("/admin/login");
 
   try {
