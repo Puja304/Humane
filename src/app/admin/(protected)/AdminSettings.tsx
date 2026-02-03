@@ -19,7 +19,7 @@ export default function AdminSettings({
     max
 }: AdminSettingProps) {
     const [value, setValue] = useState<any>("");
-    const [originalValue, setOriginalVaue] = useState<any>("");
+    const [originalValue, setOriginalValue] = useState<any>("");
     const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function AdminSettings({
         .then(res => res.json())
         .then(data => {
             setValue(data.value ?? "");
-            setOriginalVaue(data.value ?? "");
+            setOriginalValue(data.value ?? "");
         });
         
     }, [settingKey]);
@@ -47,7 +47,7 @@ export default function AdminSettings({
         });
 
         if (res.ok) {
-            setOriginalVaue(value);
+            setOriginalValue(value);
             setStatus("saved");
         } else{
             setStatus("error")

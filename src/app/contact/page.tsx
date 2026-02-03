@@ -12,6 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
 
   const containerRef = useRef(null);
+  const [openingHour, setOpeningHour] = useState("10");
+  const [closingHour, setClosingHour] = useState("8");
 
   useEffect(() => {
   if (!containerRef.current) return;
@@ -37,6 +39,17 @@ export default function Contact() {
   );
   }, []);
 
+
+// get opening and closing hours
+  useEffect(() => {
+  const keys = ["openingHour", "closingHour"];
+  Promise.all(keys.map(key => fetch(`/api/admin/settings?key=${key}`).then(res => res.json())))
+    .then(([opening, closing]) => {
+      setOpeningHour(opening.value ?? "10");
+      setClosingHour(closing.value ?? "8");
+    });
+}, []);
+
   return (
     <div className="flex flex-col align-center bg-sky-900">
       <Header/>
@@ -57,7 +70,7 @@ export default function Contact() {
           </div>
           <div className="bg-white/20 rounded-xl p-4 py-16 lg:p-16">
             <h1 className={`store-hours-title ${bree.className} text-xl text-white `}>🕒 Store Hours</h1>
-            <p className={` ${quicksand.className} mt-5 text-white`}>10 AM - 7 PM, OPEN DAILY</p>
+            <p className={` ${quicksand.className} mt-5 text-white`}>{openingHour} AM - {closingHour} PM, OPEN DAILY</p>
           </div>
           <div className="bg-white/20 rounded-xl p-4 py-16 lg:p-16">
             <h1 className={`email-title ${bree.className} text-xl text-white`}>📧 Email</h1>

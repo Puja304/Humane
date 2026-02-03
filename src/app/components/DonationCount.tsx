@@ -13,7 +13,7 @@ const DonationCount  = () => {
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const value = 2500;
+  const [value, setValue] = useState(2500);
 
   useEffect(() => {
     if (inView && containerRef.current && !hasAnimated) {
@@ -32,7 +32,14 @@ const DonationCount  = () => {
     }
   }, [inView, hasAnimated]);
 
-
+  
+  useEffect(() => {
+    fetch(`/api/admin/settings?key=donationCount`)
+    .then(res => res.json())
+        .then(data => {
+            setValue(data.value ?? 2500);
+        });
+  }, []);
 
 
     return(
