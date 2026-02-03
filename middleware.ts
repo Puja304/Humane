@@ -17,6 +17,7 @@ export function middleware( req: NextRequest) {
     const token = req.cookies.get("admin_token")?.value;
     // no token --> redirect to login page
     if (!token) {
+        console.log("Did not find token, going back to login")
         return NextResponse.redirect(new URL("/admin/login", req.url));
     }
 
@@ -27,6 +28,7 @@ export function middleware( req: NextRequest) {
         return NextResponse.next();
     } catch {
         // incorrect token, redirect to login
+        console.log("Found token but it did not match, going back to login")
         return NextResponse.redirect(new URL("/admin/login", req.url));
     }
 }
